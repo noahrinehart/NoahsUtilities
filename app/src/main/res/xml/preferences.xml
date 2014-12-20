@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_category_weather">
+
+        <ListPreference
+            android:key="pref_unit"
+            android:title="@string/pref_unit"
+            android:entries="@array/pref_units"
+            android:entryValues="@array/pref_units_values"
+            android:defaultValue="@string/pref_units_imperial"/>
+
+        <CheckBoxPreference
+            android:key="pref_uselocation"
+            android:title="@string/pref_useloc"
+            android:defaultValue="true"/>
+
+        <EditTextPreference
+            android:key="pref_zipcode"
+            android:title="@string/pref_zipcode"
+            android:defaultValue="@string/pref_location_defualt"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

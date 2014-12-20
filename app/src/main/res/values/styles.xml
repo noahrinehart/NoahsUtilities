@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="19">false</item>
+        <item name="android:windowBackground" tools:targetApi="19">@color/color_primary</item>
+        <item name="android:textColorPrimaryInverse">@color/color_background</item>
+    </style>
+
+    <style name="ToolbarCustomIconColor" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/color_background</item>
+        <item name="android:textColorPrimaryInverse">@color/color_background</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
