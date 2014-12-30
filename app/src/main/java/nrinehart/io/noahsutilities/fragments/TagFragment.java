@@ -1,8 +1,11 @@
 package nrinehart.io.noahsutilities.fragments;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +30,7 @@ public class TagFragment extends Fragment{
     EditText curComposer;
     EditText curAlbumArtist;
 
-    public final int PICKFILE_RESULT_CODE = 1;
+    public final int READ_REQUEST_CODE = 42;
 
     public TagFragment() {
         // Required empty public constructor
@@ -61,7 +64,7 @@ public class TagFragment extends Fragment{
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("audio/mpeg");
-                startActivityForResult(intent, PICKFILE_RESULT_CODE);
+                startActivityForResult(intent, READ_REQUEST_CODE);
             }
         });
 
@@ -69,5 +72,21 @@ public class TagFragment extends Fragment{
 
         return view;
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent resultData){
+
+        if (requestCode == READ_REQUEST_CODE &&  resultCode == Activity.RESULT_OK){
+
+            Uri uri = null;
+            if(resultData != null){
+                uri = resultData.getData();
+                Log.i("TagFragment", "URI: "+ uri.toString());
+            }
+
+        }
+    }
+
+
 
 }
