@@ -14,10 +14,22 @@
         android:text="Select Song"
         android:id="@+id/selectsong_button"
         android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/play_button"
+        android:layout_toStartOf="@+id/play_button" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:id="@+id/play_button"
+        android:src="@drawable/ic_action_play"
+        android:scaleType="centerInside"
+        android:clickable="false"
+        android:layout_alignTop="@+id/selectsong_button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/selectsong_button" />
 
 
     <TextView
@@ -102,8 +114,8 @@
         android:layout_alignTop="@+id/written_album"
         android:layout_alignLeft="@+id/current_num"
         android:layout_alignStart="@+id/current_num"
-        android:layout_alignRight="@+id/current_song"
-        android:layout_alignEnd="@+id/current_song" />
+        android:layout_alignRight="@+id/current_comment"
+        android:layout_alignEnd="@+id/current_comment" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -185,7 +197,10 @@
         android:layout_marginTop="16dp"
         android:layout_below="@+id/current_year"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -197,8 +212,8 @@
         android:textSize="20sp"
         android:layout_alignTop="@+id/written_comment"
         android:layout_toRightOf="@+id/current_image"
-        android:layout_alignRight="@+id/current_song"
-        android:layout_alignEnd="@+id/current_song" />
+        android:layout_alignRight="@+id/current_genre"
+        android:layout_alignEnd="@+id/current_genre" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -246,6 +261,17 @@
         android:layout_toRightOf="@+id/written_albumartist"
         android:layout_alignRight="@+id/current_composer"
         android:layout_alignEnd="@+id/current_composer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save_button"
+        android:layout_below="@+id/current_albumartist"
+        android:layout_alignRight="@+id/current_genre"
+        android:layout_alignEnd="@+id/current_genre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
