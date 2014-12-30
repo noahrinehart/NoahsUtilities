@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import nrinehart.io.noahsutilities.fragments.MapFragment;
+import nrinehart.io.noahsutilities.fragments.TagFragment;
 import nrinehart.io.noahsutilities.fragments.TaskFragment;
 import nrinehart.io.noahsutilities.fragments.WeatherFragment;
 import nrinehart.io.noahsutilities.settings.SettingsActivity;
@@ -94,6 +95,12 @@ public class MainActivity extends ActionBarActivity {
             OPTIONS_TYPE = 2;
             invalidateOptionsMenu();
             Fragment fragment = new TaskFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        }else if (position == 3){
+            OPTIONS_TYPE = 3;
+            invalidateOptionsMenu();
+            Fragment fragment = new TagFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         }

@@ -5,7 +5,7 @@
         <item>Weather</item>
         <item>Location</item>
         <item>Tasks</item>
-        <item>4</item>
+        <item>Tagger</item>
         <item>5</item>
     </string-array>
 
@@ -42,6 +42,9 @@
     <string name="pref_location_key">location</string>
     <string name="pref_location_defualt">94598</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--TAGGER-->
+    <string name="none">None</string>
 
     <!--PREFERENCES-->
     <string name="title_activity_settings">Settings</string>

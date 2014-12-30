@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Song"
+        android:id="@+id/selectsong_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Track:"
+        android:layout_marginTop="16dp"
+        android:textSize="25sp"
+        android:layout_below="@+id/selectsong_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cur_song_written" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:id="@+id/current_song"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/cur_song_written"
+        android:layout_toRightOf="@+id/cur_song_written"
+        android:layout_alignBottom="@+id/cur_song_written"
+        android:layout_alignRight="@+id/selectsong_button"
+        android:layout_alignEnd="@+id/selectsong_button" />
+
+    <ImageView
+        android:contentDescription="Music Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/current_image"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/nophoto"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/cur_song_written"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist:"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:id="@+id/written_artist"
+        android:layout_alignTop="@+id/current_image"
+        android:layout_toRightOf="@+id/current_image"
+        android:layout_toEndOf="@+id/current_image" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:textSize="20sp"
+        android:id="@+id/current_artist"
+        android:layout_alignTop="@+id/written_artist"
+        android:layout_alignLeft="@+id/current_album"
+        android:layout_alignStart="@+id/current_album"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album:"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:id="@+id/written_album"
+        android:layout_below="@+id/written_artist"
+        android:layout_toRightOf="@+id/current_image"
+        android:layout_toEndOf="@+id/current_image" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:textSize="20sp"
+        android:id="@+id/current_album"
+        android:layout_alignTop="@+id/written_album"
+        android:layout_alignLeft="@+id/current_num"
+        android:layout_alignStart="@+id/current_num"
+        android:layout_alignRight="@+id/current_song"
+        android:layout_alignEnd="@+id/current_song" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track #:"
+        android:textSize="20sp"
+        android:id="@+id/written_num"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/written_album"
+        android:layout_alignLeft="@+id/written_album"
+        android:layout_alignStart="@+id/written_album" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:id="@+id/current_num"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/written_num"
+        android:layout_toRightOf="@+id/written_num"
+        android:layout_alignRight="@+id/current_comment"
+        android:layout_alignEnd="@+id/current_comment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/written_year"
+        android:layout_below="@+id/written_num"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:text="@string/none"
+        android:id="@+id/current_year"
+        android:layout_alignTop="@+id/written_year"
+        android:layout_toRightOf="@+id/written_year"
+        android:layout_toLeftOf="@+id/current_song"
+        android:layout_toStartOf="@+id/current_song" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre:"
+        android:textSize="20sp"
+        android:id="@+id/written_genre"
+        android:layout_alignTop="@+id/current_year"
+        android:layout_alignLeft="@+id/current_song"
+        android:layout_alignStart="@+id/current_song" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:textSize="20sp"
+        android:id="@+id/current_genre"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/written_genre"
+        android:layout_toRightOf="@+id/written_genre"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment:"
+        android:textSize="20sp"
+        android:id="@+id/written_comment"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/current_year"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:id="@+id/current_comment"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/written_comment"
+        android:layout_toRightOf="@+id/current_image"
+        android:layout_alignRight="@+id/current_song"
+        android:layout_alignEnd="@+id/current_song" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Composer:"
+        android:textSize="20sp"
+        android:id="@+id/written_composer"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/written_comment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:id="@+id/current_composer"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/written_composer"
+        android:layout_toRightOf="@+id/current_image"
+        android:layout_alignRight="@+id/current_comment"
+        android:layout_alignEnd="@+id/current_comment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album Artist:"
+        android:textSize="20sp"
+        android:id="@+id/written_albumartist"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/current_composer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/none"
+        android:id="@+id/current_albumartist"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/written_albumartist"
+        android:layout_toRightOf="@+id/written_albumartist"
+        android:layout_alignRight="@+id/current_composer"
+        android:layout_alignEnd="@+id/current_composer" />
+
+
+</RelativeLayout>

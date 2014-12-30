@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Noah'sUtilities.iml" filepath="$PROJECT_DIR$/Noah'sUtilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NoahsUtilities.iml" filepath="$PROJECT_DIR$/NoahsUtilities.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
