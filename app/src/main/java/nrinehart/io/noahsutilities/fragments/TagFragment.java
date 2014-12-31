@@ -76,29 +76,20 @@ public class TagFragment extends Fragment{
         selectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*//song.start();
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("audio/mpeg");
                 startActivityForResult(intent, READ_REQUEST_CODE);
-                MediaPlayer mp=MediaPlayer.create(getActivity(), R.raw.sandstorm);
-                mp.start();*/
 
 
-                /*AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.bullseye);
-                if (afd != null) {
-                    MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-                    mmr.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-                    String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
-                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
-                    toast.show();
-                }*/
 
-                Uri path = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.bullseye);
+
+
+                /*Uri path = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.bullseye);
                 MediaMetadataRetriever mmr = new MediaMetadataRetriever();
                 mmr.setDataSource(getActivity().getApplicationContext(), path);
                 String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
-                toast.show();
+                toast.show();*/
 
 
 
@@ -124,21 +115,17 @@ public class TagFragment extends Fragment{
 
         if (requestCode == READ_REQUEST_CODE &&  resultCode == Activity.RESULT_OK){
 
-            /*AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.bullseye);
-            if (afd != null) {
-                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-                mmr.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-                String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
-                Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
-                toast.show();
-            }*/
-
-
             Uri uri = null;
             if(resultData != null){
                 uri = resultData.getData();
                 Log.i("TagFragment", "URI: "+ uri.toString());
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(getActivity().getApplicationContext(), uri);
+                String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
+                toast.show();
             }
+
 
         }
     }
