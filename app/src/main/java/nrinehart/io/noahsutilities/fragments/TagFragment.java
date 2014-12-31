@@ -2,6 +2,8 @@ package nrinehart.io.noahsutilities.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,12 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.mpatric.mp3agic.Mp3File;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.net.URI;
+import java.io.IOException;
 
 import nrinehart.io.noahsutilities.R;
 
@@ -85,18 +82,33 @@ public class TagFragment extends Fragment{
                 startActivityForResult(intent, READ_REQUEST_CODE);
                 MediaPlayer mp=MediaPlayer.create(getActivity(), R.raw.sandstorm);
                 mp.start();*/
-                Uri songUri = Uri.parse("android.resource://" + getActivity().getPackageName() + "/raw/sandstorm.mp3");
-
-                File son = new File(songUri.getPath());
-                File newSong;
-                
 
 
+                /*AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.bullseye);
+                if (afd != null) {
+                    MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                    mmr.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                    String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
+                    toast.show();
+                }*/
 
-                Boolean existsBool = son.exists();
-                String exists = existsBool.toString();
-                Toast toast = Toast.makeText(getActivity().getApplicationContext(), exists, Toast.LENGTH_SHORT);
+                Uri path = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.bullseye);
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(getActivity().getApplicationContext(), path);
+                String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
                 toast.show();
+
+
+
+
+
+
+
+
+
+
 
 
             }
@@ -112,6 +124,16 @@ public class TagFragment extends Fragment{
 
         if (requestCode == READ_REQUEST_CODE &&  resultCode == Activity.RESULT_OK){
 
+            /*AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.bullseye);
+            if (afd != null) {
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                String track = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), track, Toast.LENGTH_SHORT);
+                toast.show();
+            }*/
+
+
             Uri uri = null;
             if(resultData != null){
                 uri = resultData.getData();
@@ -126,6 +148,7 @@ public class TagFragment extends Fragment{
        // song.stop();
         //song.release();
     }
+
 
 
 

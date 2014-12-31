@@ -1,2 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('mp3agic-0.8.3.jar'))
