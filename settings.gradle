@@ -1,1 +1,1 @@
-include ':app', ':mp3agic-0.8.3'
+include ':app'

@@ -6,7 +6,7 @@
         <item>Location</item>
         <item>Tasks</item>
         <item>Tagger</item>
-        <item>5</item>
+        <item>Money</item>
     </string-array>
 
     <string-array name="pref_units">

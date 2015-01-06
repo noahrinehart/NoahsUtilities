@@ -81,7 +81,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:31:17
 	android:name
 		ADDED from AndroidManifest.xml:31:27
-activity#nrinehart.io.noahsutilities.SettingsActivity
+activity#nrinehart.io.noahsutilities.settings.SettingsActivity
 ADDED from AndroidManifest.xml:34:9
 	android:label
 		ADDED from AndroidManifest.xml:36:13
