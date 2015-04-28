@@ -2,6 +2,7 @@
 <resources>
     <color name="color_primary">#7c4dff</color>
     <color name="color_dark">#673ab7</color>
+    <color name="color_highlighted">#80673ab7</color>
     <color name="color_accent">#7E57C2</color>
     <color name="color_text_drawer">#673ab7</color>
     <color name="color_background">#EDE7F6</color>

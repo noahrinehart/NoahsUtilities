@@ -14,11 +14,18 @@
         android:layout_gravity="center" />
 
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="            HERE COMES THE MONEY"
+        android:id="@+id/textView"
+        android:layout_gravity="top|center"
+        android:textSize="20sp"
+        android:paddingTop="70dp" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HERE COMES THE MONEY"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal|top"
-        android:textSize="30sp"
-        android:paddingTop="70dp" />
+        android:text="Lucky"
+        android:id="@+id/lucky_button"
+        android:layout_gravity="center_horizontal|bottom" />
 </FrameLayout>

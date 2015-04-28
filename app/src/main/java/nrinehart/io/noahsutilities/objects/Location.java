@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by nrinehart on 12/18/2014.
  */
-public class Location implements Serializable {
+public class Location{
 
     private float longitude;
     private float latitude;

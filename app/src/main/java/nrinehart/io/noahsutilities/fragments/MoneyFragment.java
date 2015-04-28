@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import nrinehart.io.noahsutilities.R;
@@ -17,6 +18,7 @@ import nrinehart.io.noahsutilities.R;
 public class MoneyFragment extends Fragment {
 
     ImageButton moneyButton;
+    Button luckyButton;
 
     public MoneyFragment() {
         // Required empty public constructor
@@ -37,6 +39,14 @@ public class MoneyFragment extends Fragment {
             public void onClick(View view) {
                 MediaPlayer mplayer = MediaPlayer.create(getActivity(), R.raw.money);
                 mplayer.start();
+            }
+        });
+        luckyButton = (Button)view.findViewById(R.id.lucky_button);
+        luckyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.lucky);
+                mediaPlayer.start();
             }
         });
 
