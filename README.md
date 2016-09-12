@@ -1,4 +1,4 @@
 NoahsUtilities
 ==============
 
-Android app for probable Senior Project
+Android app for probable High School Senior Project
